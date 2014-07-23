@@ -4,6 +4,8 @@ env:
   - TEMPLATE=addon
   - TEMPLATE=contenttype
   - TEMPLATE=theme
+matrix:
+  fast_finish: true
 install:
   - python bootstrap.py
   - bin/buildout
