@@ -1,0 +1,19 @@
+language: python
+python: 2.7
+env:
+  - TEMPLATE=addon
+  - TEMPLATE=contenttype
+  - TEMPLATE=theme
+install:
+  - python bootstrap.py
+  - bin/buildout
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+script:
+  - bin/nosetests
+  - bin/mrbob -O brasil.gov.$TEMPLATE --config test_answers_$TEMPLATE.ini ./bobtemplates/simplesconsultoria/$TEMPLATE
+  - cd brasil.gov.$TEMPLATE
+  - make tests
+notifications:
+  irc: irc.freenode.org#simplesconsultoria
