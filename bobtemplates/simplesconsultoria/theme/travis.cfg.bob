@@ -11,5 +11,14 @@ parts +=
     createcoverage
 
 [code-analysis]
+recipe = plone.recipe.codeanalysis
 directory = ${buildout:directory}/src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}
+pre-commit-hook = False
+flake8-ignore = E501
+clean-lines = True
+deprecated-aliases = True
+imports = False
+prefer-single-quotes = True
+return-status-codes = True
+utf8-header = True
 
