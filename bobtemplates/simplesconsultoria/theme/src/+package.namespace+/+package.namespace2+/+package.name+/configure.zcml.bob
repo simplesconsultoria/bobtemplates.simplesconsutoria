@@ -7,13 +7,10 @@
   <includeDependencies package="." />
   <include package="five.grok" />
 
-  <!-- Inclui pacote browser -->
   <include package=".browser" />
 
-  <!-- Suporte ao Generic Setup-->
   <include file="profiles.zcml" />
 
-  <!-- Adiciona temas -->
   <plone:static
       directory="themes/{{{ theme.id }}}"
       type="theme"

@@ -11,7 +11,6 @@
       title="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}: Add Example"
       />
 
-  <!-- Suporte ao Generic Setup-->
   <include file="profiles.zcml" />
 
 </configure>

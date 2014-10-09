@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from {{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}.config import PROJECTNAME
 from plone.app.upgrade.utils import loadMigrationProfile
 

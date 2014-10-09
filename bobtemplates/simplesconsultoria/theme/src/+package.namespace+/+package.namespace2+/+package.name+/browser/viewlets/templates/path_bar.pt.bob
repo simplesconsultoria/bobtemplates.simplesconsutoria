@@ -2,7 +2,6 @@
      i18n:domain="plone"
      tal:define="breadcrumbs view/breadcrumbs;
                  is_rtl view/is_rtl">
-    <!-- Exemplo de customizacao -->
     <span id="breadcrumbs-you-are-here" i18n:translate="you_are_here">You
 are here:</span>
     <span id="breadcrumbs-home">

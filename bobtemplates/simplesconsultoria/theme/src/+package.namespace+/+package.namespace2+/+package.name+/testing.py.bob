@@ -20,7 +20,6 @@ class Fixture(PloneSandboxLayer):
 
 FIXTURE = Fixture()
 
-
 INTEGRATION_TESTING = IntegrationTesting(
     bases=(FIXTURE,),
     name='{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}:Integration')

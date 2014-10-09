@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from {{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}} import _
 from plone.app.textfield import RichText
 from plone.directives import form
@@ -7,17 +6,13 @@ from zope.interface import Interface
 
 
 class IBrowserLayer(Interface):
-    """Layer especifico para este add-on.
 
-    Esta interface e referenciada em browserlayers.xml.
-
-    Views e viewlets registrados para este layer serao exibidos
-    apenas quando o produto estiver instalado.
-    """
+    """A layer specific for this add-on product."""
 
 
 class IExample(form.Schema):
-    """Exemplo de schema para um tipo de conteúdo."""
+
+    """Container content type."""
 
     text = RichText(
         title=_(u'Body text'),

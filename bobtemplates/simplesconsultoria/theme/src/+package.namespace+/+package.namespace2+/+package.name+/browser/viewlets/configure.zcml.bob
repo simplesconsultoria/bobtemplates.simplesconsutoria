@@ -3,7 +3,6 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}">
 
-  <!-- Sobreescreve o viewlet de migalhas de pao -->
   <browser:viewlet
       name="plone.path_bar"
       manager="plone.app.layout.viewlets.interfaces.IAboveContent"
