@@ -91,7 +91,6 @@ class AddOnTemplateTest(BaseTemplateTest):
                 self.project + '/src/customer/site/addon/upgrades/v1010/handler.py',
                 self.project + '/src/customer/site/addon/upgrades/v1010/profile',
                 self.project + '/src/customer/site/addon/upgrades/v1010/profile/metadata.xml',
-                self.project + '/travis.cfg',
                 self.project,
             ]
         )
@@ -173,7 +172,6 @@ class ContentTypeTemplateTest(BaseTemplateTest):
                 self.project + '/src/customer/site/contenttype/upgrades/v1010/handler.py',
                 self.project + '/src/customer/site/contenttype/upgrades/v1010/profile',
                 self.project + '/src/customer/site/contenttype/upgrades/v1010/profile/metadata.xml',
-                self.project + '/travis.cfg',
                 self.project,
             ]
         )
@@ -331,6 +329,5 @@ class TemaTemplateTest(BaseTemplateTest):
                 self.project + '/src/customer/site/theme/upgrades/v1010/handler.py',
                 self.project + '/src/customer/site/theme/upgrades/v1010/profile',
                 self.project + '/src/customer/site/theme/upgrades/v1010/profile/metadata.xml',
-                self.project + '/travis.cfg',
             ]
         )
