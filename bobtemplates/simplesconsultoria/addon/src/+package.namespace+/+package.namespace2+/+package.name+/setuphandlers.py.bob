@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
-from {{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}.config import PROJECTNAME
-from plone import api
 from Products.CMFPlone import interfaces as Plone
 from Products.CMFQuickInstallerTool import interfaces as QuickInstaller
 from zope.interface import implements
-
-import logging
 
 
 class HiddenProfiles(object):

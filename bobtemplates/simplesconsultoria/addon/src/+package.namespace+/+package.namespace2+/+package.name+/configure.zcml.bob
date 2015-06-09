@@ -1,10 +1,11 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}">
 
-  <includeDependencies package="." />
+  <five:registerPackage package="." />
 
   <permission
       id="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}.AddExample"
@@ -12,6 +13,19 @@
       />
 
   <include file="profiles.zcml" />
+
+  <browser:page
+      name="{{{ package.name }}}-settings"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.PackageSettingsControlPanel"
+      permission="cmf.ManagePortal"
+      />
+
+  <browser:resourceDirectory
+      name="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}"
+      directory="static"
+      layer="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}.interfaces.IBrowserLayer"
+      />
 
 </configure>
 
