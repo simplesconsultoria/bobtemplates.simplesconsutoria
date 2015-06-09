@@ -43,7 +43,6 @@ setup(
             'nose',
             'nose-selecttests',
             'scripttest',
-            'unittest2',
         ]
     },
     entry_points={},
