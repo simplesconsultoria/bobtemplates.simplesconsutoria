@@ -41,21 +41,21 @@ class TestInstall(BaseTestCase):
     def test_version(self):
         self.assertEqual(
             self.st.getLastVersionForProfile(self.profile),
-            (u'1000',)
+            (u'1',)
         )
 
 
 class TestUpgrade(BaseTestCase):
     """Ensure product upgrades work."""
 
-    def test_to1010_available(self):
+    def test_to2_available(self):
 
         upgradeSteps = listUpgradeSteps(self.st,
                                         self.profile,
-                                        '1000')
+                                        '1')
         step = [step for step in upgradeSteps
-                if (step[0]['dest'] == ('1010',))
-                and (step[0]['source'] == ('1000',))]
+                if (step[0]['dest'] == ('2',))
+                and (step[0]['source'] == ('1',))]
         self.assertEqual(len(step), 1)
 
 

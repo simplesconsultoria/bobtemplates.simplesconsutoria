@@ -2,14 +2,13 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}">
 
   <genericsetup:registerProfile
       name="default"
-      title="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}: Instalação do Pacote"
+      title="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}"
       directory="profiles/default"
-      description="Instala o pacote {{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}} dentro de um portal Plone"
+      description="Installs {{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       i18n:attributes="title; description"
       />
@@ -18,17 +17,15 @@
       name="uninstall"
       title="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}: Remoção do Pacote"
       directory="profiles/uninstall"
-      description="Remove o pacote {{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}} de dentro de um portal Plone"
+      description="Uninstalls {{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       i18n:attributes="title; description"
       />
 
   <include package=".upgrades" />
 
-  <utility
-      factory=".config.HiddenProfiles"
-      name="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}"
-      />
+  <utility factory=".setuphandlers.HiddenProducts" name="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}" />
+  <utility factory=".setuphandlers.HiddenProfiles" name="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}" />
 
 </configure>
 

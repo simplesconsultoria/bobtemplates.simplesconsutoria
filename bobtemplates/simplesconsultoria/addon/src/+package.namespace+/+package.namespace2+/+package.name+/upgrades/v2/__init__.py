@@ -6,9 +6,9 @@ import logging
 
 
 def apply_profile(context):
-    """Atualiza perfil para versao 1010."""
+    """Apply profile."""
     logger = logging.getLogger(PROJECTNAME)
     profile = 'profile-{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}.upgrades.v1010:default'
     loadMigrationProfile(context, profile)
-    logger.info('Atualizado para versao 1010')
+    logger.info('Profile migrated')
 
