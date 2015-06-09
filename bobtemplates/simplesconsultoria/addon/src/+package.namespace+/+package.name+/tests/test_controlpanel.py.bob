@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from {{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}.config import PROJECTNAME
-from {{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}.interfaces import IPackageSettings
-from {{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}.testing import INTEGRATION_TESTING
+from {{{ package.namespace }}}.{{{ package.name }}}.config import PROJECTNAME
+from {{{ package.namespace }}}.{{{ package.name }}}.interfaces import IPackageSettings
+from {{{ package.namespace }}}.{{{ package.name }}}.testing import INTEGRATION_TESTING
 from plone import api
 from plone.app.testing import logout
 from plone.registry.interfaces import IRegistry

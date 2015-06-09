@@ -3,13 +3,13 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    i18n_domain="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}">
+    i18n_domain="{{{ package.namespace }}}.{{{ package.name }}}">
 
   <five:registerPackage package="." />
 
   <permission
-      id="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}.AddExample"
-      title="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}: Add Example"
+      id="{{{ package.namespace }}}.{{{ package.name }}}.AddExample"
+      title="{{{ package.namespace }}}.{{{ package.name }}}: Add Example"
       />
 
   <include file="profiles.zcml" />
@@ -22,9 +22,9 @@
       />
 
   <browser:resourceDirectory
-      name="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}"
+      name="{{{ package.namespace }}}.{{{ package.name }}}"
       directory="static"
-      layer="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}.interfaces.IBrowserLayer"
+      layer="{{{ package.namespace }}}.{{{ package.name }}}.interfaces.IBrowserLayer"
       />
 
 </configure>

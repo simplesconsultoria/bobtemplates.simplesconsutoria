@@ -13,26 +13,26 @@ class Fixture(PloneSandboxLayer):
 
     def setUpZope(self, app, configurationContext):
         # Load ZCML
-        import {{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}
-        self.loadZCML(package={{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}})
+        import {{{ package.namespace }}}.{{{ package.name }}}
+        self.loadZCML(package={{{ package.namespace }}}.{{{ package.name }}})
 
     def setUpPloneSite(self, portal):
         self.applyProfile(
-            portal, '{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}:default')
+            portal, '{{{ package.namespace }}}.{{{ package.name }}}:default')
 
 
 FIXTURE = Fixture()
 
 INTEGRATION_TESTING = IntegrationTesting(
     bases=(FIXTURE,),
-    name='{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}:Integration')
+    name='{{{ package.namespace }}}.{{{ package.name }}}:Integration')
 
 FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(FIXTURE,),
-    name='{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}:Functional')
+    name='{{{ package.namespace }}}.{{{ package.name }}}:Functional')
 
 ROBOT_TESTING = FunctionalTesting(
     bases=(FIXTURE, AUTOLOGIN_LIBRARY_FIXTURE, z2.ZSERVER_FIXTURE),
-    name='{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}:Robot',
+    name='{{{ package.namespace }}}.{{{ package.name }}}:Robot',
 )
 

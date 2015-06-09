@@ -3,11 +3,11 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:zcml="http://namespaces.zope.org/zcml"
-    i18n_domain="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}">
+    i18n_domain="{{{ package.namespace }}}.{{{ package.name }}}">
 
   <genericsetup:registerProfile
       name="default"
-      title="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}: v2"
+      title="{{{ package.namespace }}}.{{{ package.name }}}: v2"
       directory="profile"
       description="Upgrades package to v2"
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -17,7 +17,7 @@
   <genericsetup:upgradeSteps
       source="1"
       destination="2"
-      profile="{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}:default">
+      profile="{{{ package.namespace }}}.{{{ package.name }}}:default">
 
       <genericsetup:upgradeStep
           title="Apply profile"

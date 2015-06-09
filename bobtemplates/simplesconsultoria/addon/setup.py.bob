@@ -11,7 +11,7 @@ long_description = (
 )
 
 setup(
-    name='{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}',
+    name='{{{ package.namespace }}}.{{{ package.name }}}',
     version=version,
     description=description,
     long_description=long_description,
@@ -30,10 +30,10 @@ setup(
     keywords='',
     author='Simples Consultoria',
     author_email='produtos@simplesconsultoria.com.br',
-    url='https://github.com/simplesconsultoria/{{{ package.namespace }}}.{{{ package.namespace2 }}}.{{{ package.name }}}',
+    url='https://github.com/simplesconsultoria/{{{ package.namespace }}}.{{{ package.name }}}',
     packages=find_packages('src'),
     package_dir={'': 'src'},
-    namespace_packages=['{{{ package.namespace }}}', '{{{ package.namespace }}}.{{{ package.namespace2 }}}'],
+    namespace_packages=['{{{ package.namespace }}}'],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
